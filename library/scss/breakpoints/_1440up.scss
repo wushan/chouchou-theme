@@ -1,0 +1,23 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.hentry {
+  @include gallery(4 of 12);
+}
+/* entry content */
+.entry-content {
+  padding: 0 0 0 0;
+  font-size: 1.2em;
+}
