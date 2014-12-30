@@ -1,10 +1,15 @@
-# Bones
-A Lightweight Wordpress Development Theme
+# Choucohu - based on Bones
 
-Bones is designed to make the life of developers easier. It's built
-using HTML5 & has a strong semantic foundation.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
+Chouchou is a Wordpress theme based on the best starter theme for theme developing "Bones". I am trying to use the most simple tool Fire.app + a local Nginx enviorment to make this easier.
+
+Although you can use this theme, but I strongly suggest you to check the instructions below and set your own lighting speed enviroment of theme developing.
+
+### Instructions
+
+isn't ready yet..
+
+Modified by Tony Chiang
+http://chouchou.tw
 
 Designed by Eddie Machado
 http://themble.com/bones
@@ -13,26 +18,6 @@ License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
-#### Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
 
-#### Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-To view Release & Update Notes, read the log.txt file inside
-the library folder.
-
-For more news and to see why my parents constantly ask me what I'm
-doing with my life, follow me on twitter: @eddiemachado
-
-## Helpful Tools & Links
-
-Yeoman generator to quickly install Bones Wordpress starter theme into your Wordpress theme folder
-by 0dp
-https://github.com/0dp/generator-wp-bones
 
 
