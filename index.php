@@ -3,7 +3,7 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
-            <?php get_sidebar('sidebar-left'); ?>
+	            <?php get_sidebar('sidebar-left'); ?>
 						<main id="main" class="main-wrapper" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
