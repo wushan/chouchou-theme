@@ -1,4 +1,4 @@
-# Choucohu - based on Bones
+# Chouchou - based on Bones
 
 Chouchou is a Wordpress theme based on the best starter theme for theme developing "Bones". I am trying to use the most simple tool Fire.app + a local Nginx enviorment to make this easier.
 
