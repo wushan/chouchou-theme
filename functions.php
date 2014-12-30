@@ -106,6 +106,7 @@ add_image_size( 'bones-thumb-940', 940 );
 add_image_size( 'bones-thumb-600-f', 600, 400, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'bones-thumb-150', 150, 75, true );
 add_image_size( 'bones-thumb-75', 75, 50, true );
 
 /*
