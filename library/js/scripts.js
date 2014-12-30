@@ -113,14 +113,28 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
   //Fire fitVid.js
+  //Trigger the mobile menu
+  $('.js-mobile-nav-control').click(function(){
+    console.log('good');
+    $(this).siblings('.nav').toggleClass('active');
+  });
+  $('.js-mobile-sidebar-control').click(function(){
+    console.log('good');
+    $('.sidebar-left').toggleClass('active');
+  });
+
   $("#container").fitVids();
   // set different topSpacing between devices and Desktop
   if( viewport.width >= 768 ) {
     //Fireup Sticky.js
-    $("#sticky-nav").sticky({topSpacing:0});
+    $("#sticky-nav").sticky({
+      topSpacing:0,
+      className: 'sticking'
+    });
   } else {
     return true;
   }
+
 
 }); /* end of as page load scripts */
 

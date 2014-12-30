@@ -19,5 +19,20 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
   padding: 0 0 0 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+.sidebar-left {
+  display: block;
+  overflow: hidden;
+  &.active {
+    position: static;
+    @include span(2 of 12);
+    padding: 0;
+    @include box-shadow(none);
+    .widget {
+      text-transform: uppercase;
+      @include full;
+      margin: 0!important;
+    }
+  }
 }

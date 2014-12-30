@@ -1,6 +1,6 @@
-				<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+				<div id="sidebar-right" class="sidebar" role="complementary">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
             <!--Follow us Widget-->
             <div id="followus" class="widget followus">
               <h4 class="widgettitle">FOLLOW US</h4>
@@ -21,7 +21,7 @@
             <!-- Facepile Widget -->
             <div class="fb-like-box widget" data-href="https://www.facebook.com/chouchoutw?fref=ts" data-width="380" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<?php dynamic_sidebar( 'sidebar-right' ); ?>
 
 					<?php else : ?>
 

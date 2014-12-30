@@ -44,6 +44,9 @@ them however you see fit.
 .main-wrapper {
   @include full;
 }
+.sidebar-left {
+  display: none;
+}
 
 } // end mobile styles
 
@@ -68,3 +71,16 @@ them however you see fit.
   }
 
 } // end desktop styles
+@media (min-width: 1440px) {
+  .main-wrapper {
+    @include span(7 of 12);
+  }
+  .sidebar {
+    @include span(3 of 12 last);
+    max-width: 400px;
+  }
+  .sidebar-left {
+    display: block;
+    @include span(2 of 12);
+  }
+}

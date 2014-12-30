@@ -80,6 +80,15 @@ function my_init()
 }
 add_action('init', 'my_init');
 
+// Add Default Custome Field
+// add_action('wp_insert_post', 'set_default_custom_fields');
+// function set_default_custom_fields($post_id){
+//   if ( $_GET['post_type'] == 'post' ) {
+//     add_post_meta($post_id, 'wew', '', true);
+//   }
+//   return true;
+// }
+
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
@@ -179,14 +188,24 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 function bones_register_sidebars() {
 
   register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
+		'id' => 'sidebar-right',
+		'name' => __( 'Sidebar Right', 'bonestheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+
+  register_sidebar(array(
+    'id' => 'sidebar-left',
+    'name' => __( 'Sidebar Left', 'bonestheme' ),
+    'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
 
 	/*
 	to add more sidebars or widgetized areas, just copy

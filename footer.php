@@ -48,6 +48,10 @@
       js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=136783466462713&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+    <?php //Use Addthis-share?>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-542e19686796228a" async="async"></script>
+
 </body>
 
 </html> <!-- end of site. what a ride! -->

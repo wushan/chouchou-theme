@@ -3,7 +3,7 @@
               <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/VideoObject">
 
                 <header class="article-header entry-header">
-                
+
                   <h1 class="entry-title single-title" itemprop="name"><?php the_title(); ?></h1>
 
                   <p class="byline entry-meta vcard">
@@ -44,8 +44,26 @@
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">
+                  <p class="byline entry-meta vcard">
+                    <?php printf( __( '%1$s', 'bonestheme' ),
+                      /* the time the post was published */
+                      '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+                    ); ?>
+                  </p>
+                  <div class="footer-comment-count">
+                    <?php comments_number( __( '<i class="fa fa-comment-o fa-lg"></i><div class="comment-counts">0</div>', 'bonestheme' ), __( '<i class="fa fa-comment-o fa-lg"></i><div class="comment-counts">1</div>', 'bonestheme' ), __( '<i class="fa fa-heart-o fa-lg hot"></i><div class="comment-counts">%</div>', 'bonestheme' ) );?>
+                  </div>
+
+                  <?php the_views() ?>
+                  <?php printf( '<div class="footer-category">' . __('<em>in</em>', 'bonestheme' ) . ': %1$s</div>' , get_the_category_list(', ') ); ?>
+                  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                  <div class="addthis_sharing_toolbox"></div>
                   <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
+                  <div class="related-post">
+                    <h1 class="h3">RELATED POST</h1>
+                    <?php echo bones_related_posts(); ?>
+                  </div>
                 </footer> <?php // end article footer ?>
 
                 <?php comments_template(); ?>

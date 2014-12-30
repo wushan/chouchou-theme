@@ -109,7 +109,8 @@ H1, H2, H3, H4, H5 STYLES
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	//font-weight: 500;
+	font-weight: inherit;
+  font-family: $proxima, 'xingothic-tc-w4', $sans-serif;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -175,6 +176,7 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+
 .nav-wrapper {
   background-color: $white;
   border-bottom: 1px solid $gray;
@@ -183,12 +185,14 @@ and more scalable.
   @include box-sizing(border-box);
   padding: 0 20px;
   z-index: 999;
+  position: relative;
   //mobile-nav-control
   a.mobile-nav-control {
-    display: block;
+    display: inline-block;
     height: 60px;
     line-height: 60px;
-    color: $darkgray;
+    color: $black;
+    float: left;
     &:hover {
       color: $link-hover;
     }
@@ -201,11 +205,35 @@ and more scalable.
       font-weight: 700;
     }
   }
+  a.mobile-sidebar-control {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    color: $darkgray;
+    font-size: .8em;
+    float: right;
+    &:hover {
+      color: $link-hover;
+    }
+  }
 }
 .nav {
 	border-bottom: 0;
 	margin: 0;
   display: none;
+  &.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 99;
+    @include box-shadow(0 3px 3px rgba($black, .33));
+    li {
+      border-bottom: 1px solid $light-gray;
+    }
+  }
 	li {
 
 		a {
@@ -283,6 +311,7 @@ code {
 }
 #content {
 	margin-top: 1.5em;
+  position: relative;
   .main-wrapper {
 
     .main-inner {
@@ -294,8 +323,47 @@ code {
     }
   }
 }
+svg.brand-svg {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+svg.brand-svg #chouchou-brand{
+  fill: $white;
+}
+svg.brand-svg #background{
+  fill: $black;
+}
+//SVG Fallback
+.svg-brand-fallback {
+  display: none;
+}
+.no-svg .svg-brand-fallback {
+  display: block;
+  width: 298px;
+  height: 80px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-image: url('library/images/chouchou-brand-black-png');
+  background-size: cover;
+}
 //Video Post
     .single-format-video {
+      svg.brand-svg #chouchou-brand{
+        fill: $black;
+      }
+      svg.brand-svg #background{
+        fill: $white;
+      }
+    }
+    .single-format-video {
+      .header {
+        background-color: $white;
+        .sticky-wrapper {
+          display: none;
+        }
+      }
       #content {
         margin-top: 0;
       }
@@ -308,7 +376,7 @@ code {
         }
       }
       .wide-video-inner {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
       }
     }
@@ -331,7 +399,7 @@ code {
 				p {
 					margin: 0;
 				}
-        .byline, .footer-comment-count, .footer-category, .footer-tags, .viewed-count{
+        .addthis_sharing_toolbox, .byline, .footer-comment-count, .footer-category, .footer-tags, .viewed-count{
           display: inline-block;
           margin-right: 5px;
           img {
@@ -341,6 +409,10 @@ code {
           a {
             font-weight: 600;
           }
+        }
+        .addthis_sharing_toolbox {
+          height: 32px;
+          vertical-align: middle;
         }
         .comment-counts, .count-no {
           display: inline-block;
@@ -917,6 +989,24 @@ SIDEBARS & ASIDES
 .sidebar {
   display: none;
   overflow: hidden;
+}
+.sidebar-left {
+  display: none;
+  overflow: hidden;
+  &.active {
+    display: block;
+    background-color: $white;
+    @include box-shadow(0 3px 3px rgba($black, .33));
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    top: -1.5em;
+    width: 100%;
+    .widget {
+      text-transform: uppercase;
+      @include gallery(6 of 12);
+    }
+  }
 }
 
 	.widgettitle {

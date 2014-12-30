@@ -14,13 +14,26 @@ NAVIGATION STYLES
 *********************/
 .nav-wrapper {
   //hide mobile control when 768up
-  a.mobile-nav-control {
+  a.mobile-nav-control, a.mobile-sidebar-control {
     display: none;
   }
 }
 .nav {
   //Navigation shows original styles when 768up
   display: block;
+  &.active {
+    display: block;
+    position: static;
+    left: inherit;
+    top: inherit;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 99;
+    @include box-shadow(none);
+    li {
+      border-bottom: 1px solid $light-gray;
+    }
+  }
   li {
     a {
       border-bottom: 0;
@@ -38,3 +51,4 @@ NAVIGATION STYLES
 .sidebar {
   display: block;
 }
+
