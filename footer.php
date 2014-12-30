@@ -50,7 +50,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
     <?php //Use Addthis-share?>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-542e19686796228a" async="async"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534cdf717b6db2a0" async="async"></script>
 
 </body>
 
