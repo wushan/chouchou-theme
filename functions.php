@@ -104,9 +104,9 @@ add_image_size( 'bones-thumb-feature', 940, 500, true );
 add_image_size( 'bones-thumb-940', 940 );
 // This is Cropped
 add_image_size( 'bones-thumb-600-f', 600, 400, true );
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
-add_image_size( 'bones-thumb-150', 150, 75, true );
+add_image_size( 'bones-thumb-300', 300, 200, true );
+add_image_size( 'bones-thumb-150-square', 150, 150, true );
+add_image_size( 'bones-thumb-150', 150, 100, true );
 add_image_size( 'bones-thumb-75', 75, 50, true );
 
 /*
@@ -133,8 +133,13 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'bones-thumb-feature' => __('940px by 500px'),
+        'bones-thumb-940' => __('940px full'),
+        'bones-thumb-600' => __('600px by 400px'),
+        'bones-thumb-300' => __('300px by 200px'),
+        'bones-thumb-150-square' => __('150 Square'),
+        'bones-thumb-150' => __('150px by 100px'),
+        'bones-thumb-75' => __('75px by 50px'),
     ) );
 }
 
