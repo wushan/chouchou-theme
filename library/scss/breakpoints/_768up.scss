@@ -312,7 +312,26 @@ POSTS & CONTENT STYLES
     padding: 0 1.5em 0;
   }
 }
-
+//Related Posts
+#bones-related-posts {
+	@include full;
+	.related_post {
+		@include gallery(2 of 10 .25);
+		.thumb {
+			display: block;
+			img {
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		h4 {
+			margin: 0;
+			border-bottom: 0;
+		}
+	}
+}
 
 
 

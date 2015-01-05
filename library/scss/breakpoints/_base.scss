@@ -792,6 +792,18 @@ svg.brand-svg #background{
 		margin: 0;
 	}
 
+	//Related Posts
+	#bones-related-posts {
+		.related_post {
+			.thumb {
+				display: none;
+			}
+			h4 {
+				border-bottom: 1px solid $link-color;
+			}
+		}
+	}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

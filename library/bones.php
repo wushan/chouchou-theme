@@ -247,7 +247,12 @@ function bones_related_posts() {
 		$related_posts = get_posts( $args );
 		if($related_posts) {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+				<li class="related_post">
+					<a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+						<div class="thumb"><?php the_post_thumbnail( 'bones-thumb-150' ); ?></div>
+						<h4><?php the_title(); ?></h4>
+					</a>
+				</li>
 			<?php endforeach; }
 		else { ?>
 			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
