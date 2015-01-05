@@ -39,8 +39,9 @@ $green:             #7dd667;
 $main-color:        #000000;
 $blue:              #2980b9;
 
-$link-color:        $main-color;
-$link-hover:        lighten($link-color, 40%);
+// $link-color:        #A88C4F;
+$link-color:        #3B5998;
+$link-hover:        darken($link-color, 20%);
 
 $border-color:      #eeeeee;
 $disabled-gray:     #cfcfcf;

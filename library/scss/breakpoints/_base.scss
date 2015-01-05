@@ -22,9 +22,10 @@ body {
 	color: $text-color;
 	background-color: $white;
   -webkit-font-smoothing: antialiased;
-	@include transition(.3s all ease-in);
 }
-
+.animation {
+  @include transition(.3s all ease-in);
+}
 /*********JUSTFONT****/
 
 // .jf-loading body { /*載入中不顯示*/
@@ -88,6 +89,7 @@ LAYOUT & GRID STYLES
 .wrap {
 	width: 96%;
 	margin: 0 auto;
+  max-width: 1440px;
 }
 
 /*********************
@@ -97,7 +99,7 @@ LINK STYLES
 a, a:visited {
 	color: $link-color;
   text-decoration: none;
-
+  @extend .animation;
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
@@ -144,7 +146,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
@@ -449,7 +451,7 @@ svg.brand-svg #background{
 		.single-title,
 		.page-title,
 		.entry-title {
-			margin: 0;
+			//margin: 0;
 		}
 
 		.single-title {}
@@ -458,9 +460,28 @@ svg.brand-svg #background{
 
 		.entry-title {}
     .article-feature-thumbnail {
+      position: relative;
+      a {
+        display: block;
+        &:hover {
+          .video-icon {
+            @include opacity(0);
+          }
+        }
+      }
       img {
+        display: block;
         max-width: 100%;
         height: auto;
+      }
+      .video-icon {
+        background-color: $white;
+        padding: 5px 11px;
+        color: $link-color;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        @extend .animation;
       }
     }
 

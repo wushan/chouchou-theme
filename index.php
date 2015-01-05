@@ -8,6 +8,7 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
 								<header class="article-header">
@@ -15,7 +16,21 @@
                   // Must be inside a loop.
                     if ( has_post_thumbnail() ) {
                         // Set the proper thumbnail size tag in functions.php
-                        ?><div class="article-feature-thumbnail"><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('bones-thumb-600-f'); ?></a></div><?php
+                  ?>
+                  <div class="article-feature-thumbnail">
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('bones-thumb-600-f'); ?>
+                      <!--Post format Array-->
+                      <?php
+                        if (get_post_format() == video) {
+                          echo "<div class='video-icon'><i class='fa fa-video-camera'></i></div>";
+                        } else {
+
+                        }
+                      ?>
+                      <!--Post format Array End-->
+                    </a>
+                  </div>
+                  <?php
                       }
                       else {
                         echo '';

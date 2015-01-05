@@ -83,3 +83,9 @@ p {
           font-feature-settings: "liga", "dlig";
 }
 
+strong {
+  font-family: 'xingothic-tc-w5', $sans-serif;
+}
+del {
+  color: $darkgray;
+}
