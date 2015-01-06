@@ -74,10 +74,10 @@ function my_init()
         // The last parameter set to TRUE states that it should be loaded
         // in the footer.
         wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', FALSE, '1.11.0', TRUE);
-        wp_register_script('jquery-mig', 'http://code.jquery.com/jquery-migrate-1.2.1.js', FALSE, '', TRUE);
+        //wp_register_script('jquery-mig', 'http://code.jquery.com/jquery-migrate-1.2.1.js', FALSE, '', TRUE);
 
         wp_enqueue_script('jquery');
-        wp_enqueue_script('jquery-mig');
+        //wp_enqueue_script('jquery-mig');
     }
 }
 add_action('init', 'my_init');
