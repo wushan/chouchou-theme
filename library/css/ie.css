@@ -1,13 +1,13 @@
 /*
 Error: Undefined mixin 'gallery'.
-        on line 268 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss, in `gallery'
-        from line 268 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss
-        from line 30 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/ie.scss
+        on line 268 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss, in `gallery'
+        from line 268 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss
+        from line 30 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/ie.scss
 
 Backtrace:
-/private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss:268:in `gallery'
-/private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss:268
-/private/var/www/wp-content/themes/chouchou-theme/library/scss/ie.scss:30
+/Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss:268:in `gallery'
+/Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss:268
+/Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/ie.scss:30
 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.1/lib/sass/tree/visitors/perform.rb:332:in `visit_mixin'
 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.1/lib/sass/stack.rb:98:in `with_mixin'
 /Applications/Fire.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.1/lib/sass/stack.rb:115:in `with_frame'
@@ -76,4 +76,4 @@ org/jruby/RubyProc.java:271:in `call'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'gallery'.\A         on line 268 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss, in `gallery'\A         from line 268 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss\A         from line 30 of /private/var/www/wp-content/themes/chouchou-theme/library/scss/ie.scss"; }
+  content: "Error: Undefined mixin 'gallery'.\A         on line 268 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss, in `gallery'\A         from line 268 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/breakpoints/_768up.scss\A         from line 30 of /Applications/XAMPP/xamppfiles/htdocs/construction/wp-content/themes/chouchou-theme/library/scss/ie.scss"; }
